@@ -1,0 +1,5 @@
+.env
+datos/usuarios_simulados.csv
+__pycache__/
+*.pyc
+.DS_Store
