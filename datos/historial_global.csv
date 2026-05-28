@@ -2,3 +2,8 @@ NombreDeUsuario,Ciudad,FechaHora,Temperatura_C,Condicion_Clima,Humedad_Porcentaj
 luis,Buenos Aires,2026-05-28 15:53:21,13.54,nubes,85,18.5
 luis,Buenos Aires,2026-05-28 15:54:09,13.54,nubes,85,18.5
 luis,Madrid,2026-05-28 15:57:47,32.25,cielo claro,19,5.5
+luis,Madrid,2026-05-28 16:30:22,31.47,cielo claro,20,5.5
+luis,Madrid,2026-05-28 16:30:55,31.27,cielo claro,21,5.5
+luis,Madrid,2026-05-28 16:32:28,31.27,cielo claro,21,5.5
+luis,Buenos Aires,2026-05-28 16:33:54,14.16,nubes,86,20.4
+luis,Madrid,2026-05-28 16:35:01,31.27,cielo claro,21,5.5

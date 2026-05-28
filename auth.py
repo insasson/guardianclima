@@ -4,12 +4,19 @@
 
 import csv
 import os
+
 import re
+# ACLARACIÓN: 're' es el módulo de expresiones regulares de Python.
+# No lo vimos en clase — lo investigamos para poder detectar
+# caracteres especiales dentro de una contraseña.
+# re.search(patron, texto) devuelve un resultado si encuentra
+# el patrón, o none si no lo encuentra.
 
 ARCHIVO_USUARIOS = "datos/usuarios_simulados.csv"
 ENCABEZADOS = ["username", "password_simulada"]
 
-# Crear la carpeta datos/ si no existe
+# os.makedirs() crea la carpeta 'datos/' si no existe todavía.
+# exist_ok=True hace que no tire error si la carpeta ya estaba creada.
 os.makedirs("datos", exist_ok=True)
 
 

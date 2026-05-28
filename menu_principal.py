@@ -35,27 +35,42 @@ def mostrar_acerca_de():
     print("""
   Aplicación desarrollada como challenge final
   del ingreso a ITBA — 2026.
+  Equipo: Grupo 53
+  Integrantes: Indiana Sasson, Vicente Gallegos, [Persona 3], [Persona 4]
 
-  Funcionalidades:
-  • Consulta de clima en tiempo real (OpenWeatherMap)
-  • Historial global de consultas en CSV
-  • Estadísticas globales de uso
-  • Consejos de vestimenta con IA (Google Gemini)
-  • Sistema de login con validación de contraseña
+  ── FUNCIONALIDADES ──────────────────────────────
 
-  ⚠️  Aviso: el sistema de usuarios es una simulación
-  educativa. En una app real, las contraseñas se
-  almacenan con hashing (ej: SHA-256), nunca en
-  texto plano.
+  1. Consultar clima actual
+     Conecta con la API de OpenWeatherMap para obtener
+     temperatura, humedad, viento y condición climática
+     en tiempo real. Cada consulta se guarda en historial_global.csv.
 
-  Equipo: [53]
-  Integrantes:
-  • [Persona 1]
-  • [Persona 2]
-  • [Persona 3]
-  • [Persona 4]
+  2. Ver historial personal
+     Filtra el historial global por usuario y ciudad,
+     mostrando todas las consultas anteriores ordenadas por fecha.
+
+  3. Estadísticas globales
+     Calcula la ciudad más consultada, el total de consultas
+     y la temperatura promedio de todos los usuarios.
+
+  4. Consejo IA
+     Usa la API de Google Gemini para generar un consejo
+     personalizado de vestimenta según los datos climáticos actuales.
+
+  5. Sistema de usuarios
+     El registro verifica duplicados y valida que la contraseña
+     cumpla criterios de seguridad: longitud mínima, sin secuencias
+     obvias, sin repeticiones y sin sustituciones predecibles.
+
+  ── AVISO DE SEGURIDAD ───────────────────────────
+
+  ⚠️  El almacenamiento de contraseñas en este proyecto es una
+  simulación educativa. Las contraseñas se guardan en texto plano
+  en usuarios_simulados.csv, lo cual NO es seguro para aplicaciones
+  reales. En un sistema real, las contraseñas deben almacenarse
+  usando hashing (por ejemplo SHA-256), de forma que nunca se
+  guarde la contraseña original sino una representación irreversible.
     """)
-
 
 def mostrar_menu_principal(usuario):
     while True:
