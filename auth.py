@@ -1,6 +1,6 @@
 # auth.py
 # Registro e inicio de sesión con validación de contraseña
-# Persona 4: x
+# Persona 1: Indiana
 
 import csv
 import os

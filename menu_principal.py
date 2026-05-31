@@ -62,6 +62,13 @@ def mostrar_acerca_de():
      cumpla criterios de seguridad: longitud mínima, sin secuencias
      obvias, sin repeticiones y sin sustituciones predecibles.
 
+    AVISO DE SEGURIDAD: El almacenamiento de contraseñas en este proyecto es una
+    simulación educativa. Las contraseñas se guardan en texto plano
+    en usuarios_simulados.csv, lo cual NO es seguro para aplicaciones
+    reales. En un sistema real se usaría hashing (por ejemplo SHA-256),
+    de forma que nunca se guarde la contraseña original sino una
+    representación irreversible de la misma.
+
     """)
 
 def mostrar_menu_principal(usuario):
@@ -98,4 +105,4 @@ def mostrar_menu_principal(usuario):
             break
 
         else:
-            print("pción inválida. Escribí un número del 1 al 6.")
+            print("opción inválida. Escribí un número del 1 al 6.")
