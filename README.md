@@ -14,6 +14,7 @@ python main.py
 ## Flujo de menus
 #### Menú de acceso
 Este menú contiene 3 opciones: 
+
 1: Iniciar sesión -- > Esta función te permite ingresar tu usuario y contraseña. Verifica si lo ingresado pertenece al archivo "usuarios_simulados.csv" y si la información es correcta. Tenés 3 intentos para escribir correctamente la contraseña antes de que te devuelva automáticamente al menú de acceso. Si los datos son correctos, se pasa al menú principal.
 
 2: Registrar un nuevo usuario -- > En esta función te permite crear un nombre de usuario (si no está en uso) y una contraseña. La contraseña debe cumplir ciertos requisitos, vistos en el módulo de ciberseguridad, para que la contraseña del nuevo usuario sea robusta. Algunos de los requisitos son: longitud mínima de 12 caracteres, sin secuencias obvias como "123" o "abc", sin repeticiones de caracteres, sin sustituciones predecibles y sin tu nombre de usuario.
@@ -24,6 +25,7 @@ Al registrarse correctamente, se pasa al menú principal.
 
 #### Menú Principal
 Este menú cuenta con 6 opciones:
+
 1: Consultar clima actual -- > Al ingresar la opción 1, el programa te pide ingresar el nombre de la ciudad de la cual quieras saber el clima. La aplicación consulta la API de OpenWeatherMap y muestra la temperatura, la condición climática, la humedad y la velocidad del viento. La consulta se guarda automáticamente en el historial global.
 
 2: Ver mi historial personal -- > Al ingresar la opción 2, el programa te pide ingresar el nombre de una ciudad. La aplicación muestra todas tus consultas anteriores para esa ciudad, ordenadas de la más reciente a la más antigua.
