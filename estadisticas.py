@@ -10,7 +10,7 @@ ARCHIVO_HISTORIAL = "datos/historial_global.csv"
 
 def mostrar_estadisticas_globales():
     if not os.path.exists(ARCHIVO_HISTORIAL):
-        print("\n⚠️  Todavía no hay datos registrados en el historial.")
+        print("ERROR! Todavía no hay datos registrados en el historial.")
         return
 
     ciudades = []
@@ -26,7 +26,7 @@ def mostrar_estadisticas_globales():
                 pass
 
     if not ciudades:
-        print("\n⚠️  El historial existe pero todavía no tiene consultas registradas.")
+        print("ERROR! El historial existe pero todavía no tiene consultas registradas.")
         return
 
     total_consultas = len(ciudades)

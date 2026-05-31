@@ -6,12 +6,12 @@ from auth import iniciar_sesion, registrar_usuario
 
 def mostrar_menu_acceso():
     while True:
-        print("\n¿Qué querés hacer?")
+        print("¿Qué querés hacer?")
         print("  1. Iniciar sesión")
         print("  2. Registrar nuevo usuario")
         print("  3. Salir")
 
-        opcion = input("\nElegí una opción (1-3): ").strip()
+        opcion = input("Elegí una opción (1-3): ").strip()
 
         if opcion == "1":
             usuario = iniciar_sesion()
@@ -28,8 +28,8 @@ def mostrar_menu_acceso():
                 mostrar_menu_principal(usuario)
 
         elif opcion == "3":
-            print("\nHasta luego 👋")
+            print("Hasta luego 👋")
             break
 
         else:
-            print("\n⚠️  Opción inválida. Escribí 1, 2 o 3.")
+            print("Opción inválida. Escribí 1, 2 o 3.")

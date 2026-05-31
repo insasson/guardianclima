@@ -22,24 +22,16 @@ def buscar_clima(ciudad, usuario):
         "units": "metric",
         "lang": "es"
     }
-
-    # try/except no lo vimos en clase, lo investigamos.
-    # Intenta hacer la consulta y si algo falla muestra un mensaje
-    # en lugar de romper el programa.
-    try:
-        respuesta = requests.get(url, params=datos, timeout=10)
-    except Exception as e:
-        print(f"\n⚠️  No se pudo conectar con el servicio de clima: {e}")
-        return None
+    respuesta = requests.get(url, params=datos, timeout=10)
 
     if respuesta.status_code == 401:
-        print("\n⚠️  Error de autenticación. API key inválida.")
+        print("ERROR! Error de autenticación. API key inválida.")
         return None
     elif respuesta.status_code == 404:
-        print(f"\n⚠️  Ciudad '{ciudad}' no encontrada. Revisá el nombre e intentá de nuevo.")
+        print(f"ERROR! Ciudad '{ciudad}' no encontrada. Revisá el nombre e intentá de nuevo.")
         return None
     elif respuesta.status_code != 200:
-        print(f"\n⚠️  Error al consultar el clima. Código: {respuesta.status_code}")
+        print(f"ERROR! Error al consultar el clima. Código: {respuesta.status_code}")
         return None
 
     info = respuesta.json()
@@ -99,23 +91,15 @@ def recomendar_ropa(temp, clima, humedad, viento):
             }
         ]
     }
-
-    # try/except no lo vimos en clase, lo investigamos.
-    # Intenta hacer la consulta y si algo falla muestra un mensaje
-    # en lugar de romper el programa.
-    try:
-        respuesta = requests.post(url, params={"key": CLAVE_GEMINI}, json=cuerpo, timeout=10)
-    except Exception as e:
-        print(f"\n⚠️  No se pudo obtener el consejo de la IA: {e}")
-        return
-
+    respuesta = requests.post(url, params={"key": CLAVE_GEMINI}, json=cuerpo, timeout=10)
+    
     if respuesta.status_code == 200:
         info = respuesta.json()
         try:
             consejo = info["candidates"][0]["content"]["parts"][0]["text"]
-            print("\n🤖 Recomendación de vestimenta:")
+            print("🤖 Recomendación de vestimenta:")
             print(consejo)
         except (KeyError, IndexError):
-            print("\n⚠️  La IA no pudo generar un consejo en este momento.")
+            print("ERROR! La IA no pudo generar un consejo en este momento.")
     else:
-        print(f"\n⚠️  No se pudo obtener una recomendación. Código: {respuesta.status_code}")
+        print(f"ERROR! No se pudo obtener una recomendación. Código: {respuesta.status_code}")

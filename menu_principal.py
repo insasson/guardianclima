@@ -30,13 +30,13 @@ def consejo_vestimenta(usuario):
 
 def mostrar_acerca_de():
     print("\n" + "=" * 50)
-    print("   📖  Acerca de GuardiánClima ITBA")
+    print("   Acerca de GuardiánClima ITBA")
     print("=" * 50)
     print("""
   Aplicación desarrollada como challenge final
   del ingreso a ITBA — 2026.
   Equipo: Grupo 53
-  Integrantes: Indiana Sasson, Vicente Gallegos, [Persona 3], [Persona 4]
+  Integrantes: Indiana Sasson, Vicente Gallegos, Matías Etchegaray
 
   ── FUNCIONALIDADES ──────────────────────────────
 
@@ -62,20 +62,12 @@ def mostrar_acerca_de():
      cumpla criterios de seguridad: longitud mínima, sin secuencias
      obvias, sin repeticiones y sin sustituciones predecibles.
 
-  ── AVISO DE SEGURIDAD ───────────────────────────
-
-  ⚠️  El almacenamiento de contraseñas en este proyecto es una
-  simulación educativa. Las contraseñas se guardan en texto plano
-  en usuarios_simulados.csv, lo cual NO es seguro para aplicaciones
-  reales. En un sistema real, las contraseñas deben almacenarse
-  usando hashing (por ejemplo SHA-256), de forma que nunca se
-  guarde la contraseña original sino una representación irreversible.
     """)
 
 def mostrar_menu_principal(usuario):
     while True:
         print(f"\n{'=' * 50}")
-        print(f"   🌦️  GuardiánClima — Hola, {usuario}!")
+        print(f"   GuardiánClima — Hola, {usuario}!")
         print(f"{'=' * 50}")
         print("  1. Consultar clima actual")
         print("  2. Ver mi historial personal")
@@ -102,8 +94,8 @@ def mostrar_menu_principal(usuario):
             mostrar_acerca_de()
 
         elif opcion == "6":
-            print(f"\n👋 Cerraste sesión. ¡Hasta luego, {usuario}!")
+            print(f"Cerraste sesión. ¡Nos vemos, {usuario}!")
             break
 
         else:
-            print("\n⚠️  Opción inválida. Escribí un número del 1 al 6.")
+            print("pción inválida. Escribí un número del 1 al 6.")

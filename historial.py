@@ -1,6 +1,6 @@
 # historial.py
 # Guardar y leer historial_global.csv
-# Persona 2: Vicente
+# Persona 2: Vicente 
 
 import csv
 import os
@@ -21,12 +21,12 @@ def guardar_consulta(usuario, ciudad, temperatura, condicion, humedad, viento):
             escritor.writerow(ENCABEZADOS)
         escritor.writerow(nueva_fila)
 
-    print(f"\n✅ Consulta guardada correctamente en el historial.")
+    print(f"Consulta guardada correctamente en el historial.")
 
 
 def ver_historial_personal(usuario, ciudad):
     if not os.path.exists(ARCHIVO_HISTORIAL):
-        print("\n⚠️  Todavía no hay consultas registradas.")
+        print("Todavía no hay consultas registradas.")
         return
 
     registros_encontrados = []
@@ -39,12 +39,12 @@ def ver_historial_personal(usuario, ciudad):
                 registros_encontrados.append(fila)
 
     if not registros_encontrados:
-        print(f"\n⚠️  No se encontraron consultas para '{usuario}' en '{ciudad}'.")
+        print(f"No se encontraron consultas para '{usuario}' en '{ciudad}'.")
         return
 
     registros_encontrados.sort(key=lambda x: x["FechaHora"], reverse=True)
 
-    print(f"\n📋 Historial de {usuario} para {ciudad} ({len(registros_encontrados)} consultas):")
+    print(f"Historial de {usuario} para {ciudad} ({len(registros_encontrados)} consultas):")
     print("-" * 60)
     for registro in registros_encontrados:
         print(f"   Fecha/Hora : {registro['FechaHora']}")
